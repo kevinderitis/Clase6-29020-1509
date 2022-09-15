@@ -11,5 +11,7 @@ app.get('/user', (req, res) => {
     res.send(objeto)
 })
 
-const server = app.listen(8080, () => console.log('Server running'))
+const PORT = process.env.PORT || 8080
+
+const server = app.listen(PORT, () => console.log('Server running'))
 server.on('error', error => console.log(`Error: ${error}`))
